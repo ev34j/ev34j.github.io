@@ -1,5 +1,8 @@
 # ev34j
 
+[![Build Status](https://travis-ci.org/ev34j/ev34j.svg?branch=master)](https://travis-ci.org/ev34j/ev34j)
+[![Release](https://jitpack.io/v/ev34j/ev34j.svg)](https://jitpack.io/#ev34j/ev34j)
+
 A Java library for [ev3dev](http://www.ev3dev.org) devices.
 
 ## Introduction

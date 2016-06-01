@@ -2,6 +2,8 @@ site_name: ev34j
 
 pages:
 - Home: index.md
+- Tutorial: tutorial.md
+- Firebase Demo: firebase.md
 
 theme: cerulean
 
