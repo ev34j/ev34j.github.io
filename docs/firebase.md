@@ -2,11 +2,15 @@
 
 [![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorms-firebase.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorms-firebase)
 
-
 ## System setup
 
 The setup is the same as the
 [ev34j-mindstorms-tutorial repo](https://github.com/ev34j/ev34j-mindstorms-tutorial#system-setup).
+
+## Scenario
+
+In this demo, a robot is controlled by keyboard commands via Firebase messages. Similarly,
+the robot reports its metrics back to an app via Firebase.
 
 ## Running the app
 
@@ -19,7 +23,6 @@ $ # Copy it to the EV3
 $ make scp
 $ # Run the app on the EV3
 $ make run
-
 ```
 
 Run the keyboard controller with:
