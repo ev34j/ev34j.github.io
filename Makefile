@@ -1,0 +1,3 @@
+
+default:
+	mkdocs build --clean

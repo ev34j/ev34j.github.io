@@ -1,0 +1,15 @@
+site_name: ev34j
+
+pages:
+- Home: index.md
+- Tutorial: about.md
+- Firebase Demo: about.md
+
+theme: cerulean
+
+google_analytics: ['UA-78614552-1', 'ev34j.com']
+
+
+
+
+
