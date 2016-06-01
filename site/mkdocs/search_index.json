@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "ev34j\n\n\nA Java library for \nev3dev\n devices.\n\n\nIntroduction\n\n\nThe \nLego Mindstorms visual editor\n\nis a great first programming environment. However, as things get more complex,\nvisual programming can get cumbersome and you want to  use code rather than blocks.\nThe \nev34j-mindstorms library\n is meant to bridge the transition to code\nby providing simple Java objects that map directly to the Mindstorms blocks in\nthe visual editor.\n\n\nExample Code\n\n\nimport com.ev34j.mindstorms.motor.SteeringMotors;\n\npublic class SimpleSteeringMotors {\n\n  public static void main(String[] args) {\n\n    System.out.println(\nTrying out SteeringMotors\n);\n    SteeringMotors motors = new SteeringMotors(\nA\n, \nB\n);\n\n    // Go forward 2 rotations at 25% power\n    motors.onForRotations(0, 25, 2);\n    motors.waitUntilStopped();\n\n    // Go back 2 rotations at 25% power\n    motors.onForRotations(0, -25, 2);\n    motors.waitUntilStopped();\n  }\n}\n\n\n\n\nCompatibility\n\n\nThe ev34j-mindstorms library works with these devices:\n\n\n\n\nLego Mindstorms - EV3\n\n\nBrickPi\n\n\nPiStorms\n\n\n\n\nUsage\n\n\nThe \nev34j-mindstorms-tutorial\n repo\ndescribes how to setup your environment and execute ev34j-based programs.\n\n\nFirebase Demo\n\n\nThe \nev34j-mindstorms-firebase\n repo\ndemonstrates the use of \nFirebase\n with an ev34j robot.\n\n\nev34j-mindstorms Classes\n\n\nThe ev34j-mindstorms classes are outlined\n\nhere\n.\n\n\nJavadocs\n\n\nThe javadocs for ev34j-mindstorms are \nhere\n.\n\n\nAcknowledgments\n\n\nSincere thanks to:\n\n\n\n\n\n\n@dlech\n and \n@rhempel\n for their excellent \nev3dev.org\n effort.\n\n\n\n\n\n\n@jabrena\n for his work to provide a LeJOS-like Java API at \nev3dev-lang-java\n.", 
+            "text": "ev34j\n\n\n\n\n\n\nA Java library for \nev3dev\n devices.\n\n\nIntroduction\n\n\nThe \nLego Mindstorms visual editor\n\nis a great first programming environment. However, as things get more complex,\nvisual programming can get cumbersome and you want to  use code rather than blocks.\nThe \nev34j-mindstorms library\n is meant to bridge the transition to code\nby providing simple Java objects that map directly to the Mindstorms blocks in\nthe visual editor.\n\n\nExample Code\n\n\nimport com.ev34j.mindstorms.motor.SteeringMotors;\n\npublic class SimpleSteeringMotors {\n\n  public static void main(String[] args) {\n\n    System.out.println(\nTrying out SteeringMotors\n);\n    SteeringMotors motors = new SteeringMotors(\nA\n, \nB\n);\n\n    // Go forward 2 rotations at 25% power\n    motors.onForRotations(0, 25, 2);\n    motors.waitUntilStopped();\n\n    // Go back 2 rotations at 25% power\n    motors.onForRotations(0, -25, 2);\n    motors.waitUntilStopped();\n  }\n}\n\n\n\n\nCompatibility\n\n\nThe ev34j-mindstorms library works with these devices:\n\n\n\n\nLego Mindstorms - EV3\n\n\nBrickPi\n\n\nPiStorms\n\n\n\n\nUsage\n\n\nThe \nev34j-mindstorms-tutorial\n repo\ndescribes how to setup your environment and execute ev34j-based programs.\n\n\nFirebase Demo\n\n\nThe \nev34j-mindstorms-firebase\n repo\ndemonstrates the use of \nFirebase\n with an ev34j robot.\n\n\nev34j-mindstorms Classes\n\n\nThe ev34j-mindstorms classes are outlined\n\nhere\n.\n\n\nJavadocs\n\n\nThe javadocs for ev34j-mindstorms are \nhere\n.\n\n\nAcknowledgments\n\n\nSincere thanks to:\n\n\n\n\n\n\n@dlech\n and \n@rhempel\n for their excellent \nev3dev.org\n effort.\n\n\n\n\n\n\n@jabrena\n for his work to provide a LeJOS-like Java API at \nev3dev-lang-java\n.", 
             "title": "Home"
         }, 
         {
@@ -49,6 +49,111 @@
             "location": "/#acknowledgments", 
             "text": "Sincere thanks to:    @dlech  and  @rhempel  for their excellent  ev3dev.org  effort.    @jabrena  for his work to provide a LeJOS-like Java API at  ev3dev-lang-java .", 
             "title": "Acknowledgments"
+        }, 
+        {
+            "location": "/tutorial/", 
+            "text": "ev34j-mindstorms Tutorial\n\n\n\n\nThis tutorial covers the basics of how to setup your EV3 and your\nOSX development environment. It also has some simple\n\ncode examples\n\nof the \nev34j-mindstorms\n objects.\n\n\nSystem setup\n\n\nBefore you can run Java programs on the EV3 there is some setup required:\n\n\n\n\nInstall required software\n on your Mac.\n\n\nCreate a bootable image\n of the \nev3dev distro\n on a micro SD card.\n\n\nEstablish a network connection\n on your EV3.\n\n\nInstall required software\n on your EV3.\n\n\n\n\nClone the ev34j-mindstorms tutorial repo\n\n\nOpen a \nTerminal\n window and clone the\n\nev34j-mindstorms-tutorial repo\n from \nGitHub\n\nwith:\n\n\n$ cd ~\n$ mkdir git\n$ cd git\n$ git clone https://github.com/ev3dev-lang-java/mindstorm-tutorial.git\n$ cd ev34j-mindstorms-tutorial\n$ ls\n\n\n\n\nVerify that you everything it setup properly with:\n\n\n$ # One-time copy of hte scripts\n$ make copy-scripts\n$ # Build the jar\n$ make clean build\n$ # Copy the jar to your EV3\n$ make scp\n$ # Run the app on your EV3\n$ make run\n\n\n\n\nIf you get a \"\nmake: \n [scp] Error 6\n*\" error message, see the \nFAQ\n.\n\n\nBuild and run programs\n\n\npom.xml\n\n\nThe \npom.xml\n\ncontains the configuration information required to build the program. The two relevant properties are:\n\n\n\n\n\n\n\n\nProperty\n\n\nValue\n\n\n\n\n\n\n\n\n\n\nev34j.version\n\n\nUpdate when the underlying ev34j library changes\n\n\n\n\n\n\nmainclass.name\n\n\nSet this to the name of the java class that you want to execute\n\n\n\n\n\n\n\n\nMakefile\n\n\nThe \nMakefile\n\nsimplifies building and running programs. The configuration variables at the top of the \nMakefile\n include:\n\n\n\n\n\n\n\n\nVariable\n\n\nValue\n\n\n\n\n\n\n\n\n\n\nEV3_HOSTNAME\n\n\nUpdate if you change /etc/hostname on the EV3\n\n\n\n\n\n\nEV3_PASSWORD\n\n\nUpdate if you change the default password on the EV3\n\n\n\n\n\n\nJAR_NAME\n\n\nNo reason to change\n\n\n\n\n\n\nLOG_PROP_NAME\n\n\nNo reason to change\n\n\n\n\n\n\nSSH_PREFIX\n\n\nSet to blank if you use \nSSH keys\n instead of \nsshpass\n\n\n\n\n\n\n\n\nThe \nMakefile\n has these targets:\n\n\n\n\n\n\n\n\nTarget\n\n\nAction\n\n\n\n\n\n\n\n\n\n\nclean\n\n\nErase everything in the target directory\n\n\n\n\n\n\nbuild\n\n\nBuild the uber-jar file\n\n\n\n\n\n\nscp\n\n\nCopy the jar file to the EV3\n\n\n\n\n\n\nrun\n\n\nExecute the jar file on the EV3\n\n\n\n\n\n\ndebug\n\n\nExecute the jar file in the debgugger mode on the EV3\n\n\n\n\n\n\nlogging\n\n\nExecute the jar file with logging enabled on the EV3\n\n\n\n\n\n\nkill\n\n\nKill all java processes running on the EV3\n\n\n\n\n\n\ncopy-scripts\n\n\nCopy convenient command-line scripts to the EV3\n\n\n\n\n\n\n\n\nTo build and run a program from the OSX command line:\n\n\n$ cd ev34j-mindstorms-tutorial\n$ # Build the jar\n$ make build\n$ # Copy the jar to the EV3\n$ make scp\n$ # Run the app on the EV3\n$ make run\n\n\n\n\nYou can also execute a program from the EV3 command-line:\n\n\n$ make copy-scripts\n$ ssh robot@ev3dev\nrobot@ev3dev:~$ ./run.sh\nrobot@ev3dev:~$ # Or you can use java directly\nrobot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar\n\n\n\n\nRemember\n to rebuild the jar and copy it to the EV3 after making changes in the\nsource code. Also, if you rename your main java class or want to execute a different class, make sure you\nupdate the \nmainclass.name\n value in the \npom.xml\n.\n\n\nBuilding and running programs from the IntelliJ Toolbar\n\n\nYou can also add buttons to the IntelliJ Toolbar that make building and running your\nprograms very easy.\n\n\nAdding toolbar buttons is a two step process:\n\n\n\n\n\n\nAdd External Tools\n to build, copy, run and debug programs\n\n\n\n\n\n\nAdd buttons to the Toolbar\n and map them to External Tools\n\n\n\n\n\n\nDebugging a program with IntelliJ\n\n\nStart a program in debug mode on the EV3\n\n\nYou can do this multiple ways:\n\n\n\n\n\n\nClick on the \nDebug program on EV3\n toolbar button\n\n\n\n\n\n\nOn the OSX command-line:\n\n\n\n\n\n\n$ make debug\n# Debug jar on EV3\nsshpass -p maker ssh robot@ev3dev1 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar\nListening for transport dt_socket at address: 5005\n\n\n\n\n\n\nOn the EV3 command-line:\n\n\n\n\nrobot@ev3dev:~$ ./debug.sh\nListening for transport dt_socket at address: 5005\nrobot@ev3dev:~$ # Or\nrobot@ev3dev:~$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar\nListening for transport dt_socket at address: 5005\n\n\n\n\nRun the IntelliJ debugger\n\n\n\n\n\n\nCreate a remote configuration\n.\n\n\n\n\n\n\nClick on \nRun\n --\n \nDebug...\n and then choose the newly created Remote configuration.\n\n\n\n\n\n\nSee the IntelliJ \ndocumentation\n for how to\nset breakpoints and step through a program.\n\n\n\n\n\n\nStopping a program on the EV3\n\n\nIf you start a program with \nmake run\n on OSX and then kill the process with \nCtrl-C\n, the\nprogram might continue to run on the EV3, i.e., killing a make process on OSX does\nnot kill the program on EV3. Before running the program again, you have to kill the still-running\nprocess.\n\n\nYou can kill an EV3 program from the OSX command-line with:\n\n\n$ make kill\n# Kill java process on EV3\nsshpass -p maker ssh robot@ev3dev1 ./kill.sh\n\n\n\n\nYou can kill an EV3 program from the EV3 command-line with:\n\n\nrobot@ev3dev:~$ ./kill.sh\n\n\n\n\nThe kill.sh script is copied to the EV3 with:\n\n\n$ make copy-scripts\n\n\n\n\nUsing the ev34j-mindstorm classes\n\n\nThe \nev34j-mindstorms\n classes are outlined\n\nhere\n\nand the javadocs are \nhere\n.\n\n\nTrivial sample programs are provided \nhere\n.\nTo execute a program,\nupdate the \nmainclass.name\n value in the \npom.xml\n\nwith the name of the class you want to run.", 
+            "title": "Tutorial"
+        }, 
+        {
+            "location": "/tutorial/#ev34j-mindstorms-tutorial", 
+            "text": "This tutorial covers the basics of how to setup your EV3 and your\nOSX development environment. It also has some simple code examples \nof the  ev34j-mindstorms  objects.", 
+            "title": "ev34j-mindstorms Tutorial"
+        }, 
+        {
+            "location": "/tutorial/#system-setup", 
+            "text": "Before you can run Java programs on the EV3 there is some setup required:   Install required software  on your Mac.  Create a bootable image  of the  ev3dev distro  on a micro SD card.  Establish a network connection  on your EV3.  Install required software  on your EV3.", 
+            "title": "System setup"
+        }, 
+        {
+            "location": "/tutorial/#clone-the-ev34j-mindstorms-tutorial-repo", 
+            "text": "Open a  Terminal  window and clone the ev34j-mindstorms-tutorial repo  from  GitHub \nwith:  $ cd ~\n$ mkdir git\n$ cd git\n$ git clone https://github.com/ev3dev-lang-java/mindstorm-tutorial.git\n$ cd ev34j-mindstorms-tutorial\n$ ls  Verify that you everything it setup properly with:  $ # One-time copy of hte scripts\n$ make copy-scripts\n$ # Build the jar\n$ make clean build\n$ # Copy the jar to your EV3\n$ make scp\n$ # Run the app on your EV3\n$ make run  If you get a \" make:   [scp] Error 6 *\" error message, see the  FAQ .", 
+            "title": "Clone the ev34j-mindstorms tutorial repo"
+        }, 
+        {
+            "location": "/tutorial/#build-and-run-programs", 
+            "text": "", 
+            "title": "Build and run programs"
+        }, 
+        {
+            "location": "/tutorial/#pomxml", 
+            "text": "The  pom.xml \ncontains the configuration information required to build the program. The two relevant properties are:     Property  Value      ev34j.version  Update when the underlying ev34j library changes    mainclass.name  Set this to the name of the java class that you want to execute", 
+            "title": "pom.xml"
+        }, 
+        {
+            "location": "/tutorial/#makefile", 
+            "text": "The  Makefile \nsimplifies building and running programs. The configuration variables at the top of the  Makefile  include:     Variable  Value      EV3_HOSTNAME  Update if you change /etc/hostname on the EV3    EV3_PASSWORD  Update if you change the default password on the EV3    JAR_NAME  No reason to change    LOG_PROP_NAME  No reason to change    SSH_PREFIX  Set to blank if you use  SSH keys  instead of  sshpass     The  Makefile  has these targets:     Target  Action      clean  Erase everything in the target directory    build  Build the uber-jar file    scp  Copy the jar file to the EV3    run  Execute the jar file on the EV3    debug  Execute the jar file in the debgugger mode on the EV3    logging  Execute the jar file with logging enabled on the EV3    kill  Kill all java processes running on the EV3    copy-scripts  Copy convenient command-line scripts to the EV3     To build and run a program from the OSX command line:  $ cd ev34j-mindstorms-tutorial\n$ # Build the jar\n$ make build\n$ # Copy the jar to the EV3\n$ make scp\n$ # Run the app on the EV3\n$ make run  You can also execute a program from the EV3 command-line:  $ make copy-scripts\n$ ssh robot@ev3dev\nrobot@ev3dev:~$ ./run.sh\nrobot@ev3dev:~$ # Or you can use java directly\nrobot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar  Remember  to rebuild the jar and copy it to the EV3 after making changes in the\nsource code. Also, if you rename your main java class or want to execute a different class, make sure you\nupdate the  mainclass.name  value in the  pom.xml .", 
+            "title": "Makefile"
+        }, 
+        {
+            "location": "/tutorial/#building-and-running-programs-from-the-intellij-toolbar", 
+            "text": "You can also add buttons to the IntelliJ Toolbar that make building and running your\nprograms very easy.  Adding toolbar buttons is a two step process:    Add External Tools  to build, copy, run and debug programs    Add buttons to the Toolbar  and map them to External Tools", 
+            "title": "Building and running programs from the IntelliJ Toolbar"
+        }, 
+        {
+            "location": "/tutorial/#debugging-a-program-with-intellij", 
+            "text": "", 
+            "title": "Debugging a program with IntelliJ"
+        }, 
+        {
+            "location": "/tutorial/#start-a-program-in-debug-mode-on-the-ev3", 
+            "text": "You can do this multiple ways:    Click on the  Debug program on EV3  toolbar button    On the OSX command-line:    $ make debug\n# Debug jar on EV3\nsshpass -p maker ssh robot@ev3dev1 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar\nListening for transport dt_socket at address: 5005   On the EV3 command-line:   robot@ev3dev:~$ ./debug.sh\nListening for transport dt_socket at address: 5005\nrobot@ev3dev:~$ # Or\nrobot@ev3dev:~$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar\nListening for transport dt_socket at address: 5005", 
+            "title": "Start a program in debug mode on the EV3"
+        }, 
+        {
+            "location": "/tutorial/#run-the-intellij-debugger", 
+            "text": "Create a remote configuration .    Click on  Run  --   Debug...  and then choose the newly created Remote configuration.    See the IntelliJ  documentation  for how to\nset breakpoints and step through a program.", 
+            "title": "Run the IntelliJ debugger"
+        }, 
+        {
+            "location": "/tutorial/#stopping-a-program-on-the-ev3", 
+            "text": "If you start a program with  make run  on OSX and then kill the process with  Ctrl-C , the\nprogram might continue to run on the EV3, i.e., killing a make process on OSX does\nnot kill the program on EV3. Before running the program again, you have to kill the still-running\nprocess.  You can kill an EV3 program from the OSX command-line with:  $ make kill\n# Kill java process on EV3\nsshpass -p maker ssh robot@ev3dev1 ./kill.sh  You can kill an EV3 program from the EV3 command-line with:  robot@ev3dev:~$ ./kill.sh  The kill.sh script is copied to the EV3 with:  $ make copy-scripts", 
+            "title": "Stopping a program on the EV3"
+        }, 
+        {
+            "location": "/tutorial/#using-the-ev34j-mindstorm-classes", 
+            "text": "The  ev34j-mindstorms  classes are outlined here \nand the javadocs are  here .  Trivial sample programs are provided  here .\nTo execute a program,\nupdate the  mainclass.name  value in the  pom.xml \nwith the name of the class you want to run.", 
+            "title": "Using the ev34j-mindstorm classes"
+        }, 
+        {
+            "location": "/firebase/", 
+            "text": "ev34j-mindstorms Firebase Demo\n\n\n\n\nSystem setup\n\n\nThe setup is the same as the\n\nev34j-mindstorms-tutorial repo\n.\n\n\nRunning the app\n\n\nRun the robot app with:\n\n\n$ # Build the jars\n$ make clean build\n$ # Copy it to the EV3\n$ make scp\n$ # Run the app on the EV3\n$ make run\n\n\n\n\n\nRun the keyboard controller with:\n\n\n$ # Build the uber-jars\n$ make clean build\n$ java -jar target/keyboardcontroller-jar-with-dependencies.jar\n\n\n\n\nKeyboard commands\n\n\nThe robot is controlled with these keystrokes:\n\n\n\n\n\n\n\n\nKeystroke\n\n\nAction\n\n\n\n\n\n\n\n\n\n\nUp-Arrow\n\n\nIncrease power by 10%\n\n\n\n\n\n\nDown-Arrow\n\n\nDecrease power by 10%\n\n\n\n\n\n\nLeft-Arrow\n\n\nIncrease steering by 10%\n\n\n\n\n\n\nRight-Arrow\n\n\nDecrease steering right by 10%\n\n\n\n\n\n\nShift-Up-Arrow\n\n\nIncrease power by 20%\n\n\n\n\n\n\nShift-Down-Arrow\n\n\nDecrease power by 20%\n\n\n\n\n\n\nShift-Left-Arrow\n\n\nIncrease steering by 20%\n\n\n\n\n\n\nShift-Right-Arrow\n\n\nDecrease steering right by 20%\n\n\n\n\n\n\ns/S\n\n\nSet steering to straight\n\n\n\n\n\n\nh/H\n\n\nHalt motors\n\n\n\n\n\n\nr/R\n\n\nReset motors\n\n\n\n\n\n\nq/Q twice\n\n\nRobot app exits\n\n\n\n\n\n\n\n\nWarnings\n\n\nSlow performance\n\n\nThe robot app startup time on a EV3 is painfully slow.\nAfter starting the app you will hear it say \"initialized\" after ~35 secs.\nEventually (~3 minutes) it will say \"processing keystrokes\" when it is ready for input.\nThe latency for sending the keystrokes and robot metrics is very good.\n\n\nThe slow startup time is due to negotiating the https connection with Firebase.\nPerformance on a BrickPi+ with a Raspi 2 is much better -- less than 10 secs)\n\n\nZombie processes\n\n\nIf you do not cleanly exit the robot app with the keyboard controller (by typing q q),\nyou will need to ssh into the EV3 and kill the robot java process manually:\n\n\n$ ssh robot@ev3dev\nrobot@ev3dev:~$ ps -aef | grep java\nrobot     1069  1067 78 19:32 ?        00:00:54 java -jar firebaserobot-jar-with-dependencies.jar\nrobot     1108  1101  0 19:34 pts/0    00:00:00 grep java\nrobot@ev3dev:~$ kill -9 1069\nrobot@ev3dev:~$ # Confirm process was stopped\nrobot@ev3dev:~$ ps -aef | grep java\nrobot     1108  1101  0 19:34 pts/0    00:00:00 grep java\n\n\n\n\nIn this case the robot java process PID was 1069.", 
+            "title": "Firebase Demo"
+        }, 
+        {
+            "location": "/firebase/#ev34j-mindstorms-firebase-demo", 
+            "text": "", 
+            "title": "ev34j-mindstorms Firebase Demo"
+        }, 
+        {
+            "location": "/firebase/#system-setup", 
+            "text": "The setup is the same as the ev34j-mindstorms-tutorial repo .", 
+            "title": "System setup"
+        }, 
+        {
+            "location": "/firebase/#running-the-app", 
+            "text": "Run the robot app with:  $ # Build the jars\n$ make clean build\n$ # Copy it to the EV3\n$ make scp\n$ # Run the app on the EV3\n$ make run  Run the keyboard controller with:  $ # Build the uber-jars\n$ make clean build\n$ java -jar target/keyboardcontroller-jar-with-dependencies.jar", 
+            "title": "Running the app"
+        }, 
+        {
+            "location": "/firebase/#keyboard-commands", 
+            "text": "The robot is controlled with these keystrokes:     Keystroke  Action      Up-Arrow  Increase power by 10%    Down-Arrow  Decrease power by 10%    Left-Arrow  Increase steering by 10%    Right-Arrow  Decrease steering right by 10%    Shift-Up-Arrow  Increase power by 20%    Shift-Down-Arrow  Decrease power by 20%    Shift-Left-Arrow  Increase steering by 20%    Shift-Right-Arrow  Decrease steering right by 20%    s/S  Set steering to straight    h/H  Halt motors    r/R  Reset motors    q/Q twice  Robot app exits", 
+            "title": "Keyboard commands"
+        }, 
+        {
+            "location": "/firebase/#warnings", 
+            "text": "", 
+            "title": "Warnings"
+        }, 
+        {
+            "location": "/firebase/#slow-performance", 
+            "text": "The robot app startup time on a EV3 is painfully slow.\nAfter starting the app you will hear it say \"initialized\" after ~35 secs.\nEventually (~3 minutes) it will say \"processing keystrokes\" when it is ready for input.\nThe latency for sending the keystrokes and robot metrics is very good.  The slow startup time is due to negotiating the https connection with Firebase.\nPerformance on a BrickPi+ with a Raspi 2 is much better -- less than 10 secs)", 
+            "title": "Slow performance"
+        }, 
+        {
+            "location": "/firebase/#zombie-processes", 
+            "text": "If you do not cleanly exit the robot app with the keyboard controller (by typing q q),\nyou will need to ssh into the EV3 and kill the robot java process manually:  $ ssh robot@ev3dev\nrobot@ev3dev:~$ ps -aef | grep java\nrobot     1069  1067 78 19:32 ?        00:00:54 java -jar firebaserobot-jar-with-dependencies.jar\nrobot     1108  1101  0 19:34 pts/0    00:00:00 grep java\nrobot@ev3dev:~$ kill -9 1069\nrobot@ev3dev:~$ # Confirm process was stopped\nrobot@ev3dev:~$ ps -aef | grep java\nrobot     1108  1101  0 19:34 pts/0    00:00:00 grep java  In this case the robot java process PID was 1069.", 
+            "title": "Zombie processes"
         }
     ]
 }

@@ -1,4 +1,4 @@
-# An ev34j-mindstorms tutorial
+# ev34j-mindstorms Tutorial
 
 [![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorms-tutorial.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorms-tutorial)
 
