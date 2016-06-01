@@ -2,13 +2,12 @@ site_name: ev34j
 
 pages:
 - Home: index.md
-- Tutorial: about.md
-- Firebase Demo: about.md
 
 theme: cerulean
 
-google_analytics: ['UA-78614552-1', 'ev34j.com']
+google_analytics: ['UA-78614552-1', 'auto']
 
+repo_url: https://github.com/ev34j/ev34j
 
 
 

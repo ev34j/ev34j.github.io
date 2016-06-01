@@ -29,7 +29,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-78614552-1', 'ev34j.com');
+            ga('create', 'UA-78614552-1', 'auto');
             ga('send', 'pageview');
         </script>
         
@@ -65,18 +65,6 @@
                 </li>
             
             
-            
-                <li >
-                    <a href="about/">Tutorial</a>
-                </li>
-            
-            
-            
-                <li >
-                    <a href="about/">Firebase Demo</a>
-                </li>
-            
-            
             </ul>
 
             <!-- Search, Navigation and Repo links -->
@@ -91,9 +79,18 @@
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="about/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://github.com/ev34j/ev34j">
+                        
+                            <i class="fa fa-github"></i>
+                        
+                        GitHub
                     </a>
                 </li>
                 
@@ -106,37 +103,84 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+        <li class="main active"><a href="#ev34j">ev34j</a></li>
         
-            <li><a href="#commands">Commands</a></li>
+            <li><a href="#introduction">Introduction</a></li>
         
-            <li><a href="#project-layout">Project layout</a></li>
+            <li><a href="#example-code">Example Code</a></li>
         
-            <li><a href="#test-header">Test Header</a></li>
+            <li><a href="#compatibility">Compatibility</a></li>
+        
+            <li><a href="#usage">Usage</a></li>
+        
+            <li><a href="#firebase-demo">Firebase Demo</a></li>
+        
+            <li><a href="#the-ev34j-mindstorms-classes">The ev34j-mindstorms classes</a></li>
+        
+            <li><a href="#acknowledgments">Acknowledgments</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h1 id="ev34j">ev34j</h1>
+<p>A Java library for <a href="http://www.ev3dev.org">ev3dev</a> devices.</p>
+<h2 id="introduction">Introduction</h2>
+<p>The <a href="http://www.lego.com/en-us/mindstorms/downloads/download-software">Lego Mindstorms visual editor</a>
+is a great first programming environment. However, as things get more complex,
+visual programming can get cumbersome and you want to  use code rather than blocks.
+The <a href="https://github.com/ev34j/ev34j">ev34j-mindstorms library</a> is meant to bridge the transition to code
+by providing simple Java objects that map directly to the Mindstorms blocks in
+the visual editor.</p>
+<h2 id="example-code">Example Code</h2>
+<pre><code class="java">import com.ev34j.mindstorms.motor.SteeringMotors;
+
+public class SimpleSteeringMotors {
+
+  public static void main(String[] args) {
+
+    System.out.println(&quot;Trying out SteeringMotors&quot;);
+    SteeringMotors motors = new SteeringMotors(&quot;A&quot;, &quot;B&quot;);
+
+    // Go forward 2 rotations at 25% power
+    motors.onForRotations(0, 25, 2);
+    motors.waitUntilStopped();
+
+    // Go back 2 rotations at 25% power
+    motors.onForRotations(0, -25, 2);
+    motors.waitUntilStopped();
+  }
+}
 </code></pre>
-<h2 id="test-header">Test Header</h2>
-<pre><code class="bash">cd test
-</code></pre></div>
+
+<h2 id="compatibility">Compatibility</h2>
+<p>The ev34j-mindstorms library works with these devices:</p>
+<ul>
+<li><a href="http://www.lego.com/en-us/mindstorms/about-ev3">Lego Mindstorms - EV3</a></li>
+<li><a href="http://www.dexterindustries.com/brickpi/">BrickPi</a></li>
+<li><a href="http://www.mindsensors.com/teaching-stem-with-robotics/13-pistorms-base-kit-raspberry-pi-brain-for-lego-robot">PiStorms</a></li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>The <a href="https://github.com/ev34j/ev34j-mindstorms-tutorial">ev34j-mindstorms-tutorial</a> repo
+describes how to setup your environment and execute ev34j-based programs.</p>
+<h2 id="firebase-demo">Firebase Demo</h2>
+<p>The <a href="https://github.com/ev34j/ev34j-mindstorms-firebase">ev34j-mindstorms-firebase</a> repo
+demonstrates the use of <a href="https://www.firebase.com">Firebase</a> with an ev34j robot.</p>
+<h2 id="the-ev34j-mindstorms-classes">The ev34j-mindstorms classes</h2>
+<p>The ev34j-mindstorms classes are outlined
+<a href="https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorms-Object-Summary">here</a>
+and the javadocs are <a href="http://www.ev34j.com/javadocs/">here</a>.</p>
+<h2 id="acknowledgments">Acknowledgments</h2>
+<p>Sincere thanks to:</p>
+<ul>
+<li>
+<p><a href="https://github.com/dlech">@dlech</a> and <a href="https://github.com/rhempel">@rhempel</a> for their excellent <a href="http://www.ev3dev.org">ev3dev.org</a> effort.</p>
+</li>
+<li>
+<p><a href="https://github.com/jabrena">@jabrena</a> for his work to provide a LeJOS-like Java API at <a href="https://github.com/ev3dev-lang-java/ev3dev-lang-java">ev3dev-lang-java</a>.</p>
+</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
