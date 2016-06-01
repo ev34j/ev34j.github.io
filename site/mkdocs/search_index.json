@@ -2,48 +2,53 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.\n\n\n\nTest Header\n\n\ncd test", 
+            "text": "ev34j\n\n\nA Java library for \nev3dev\n devices.\n\n\nIntroduction\n\n\nThe \nLego Mindstorms visual editor\n\nis a great first programming environment. However, as things get more complex,\nvisual programming can get cumbersome and you want to  use code rather than blocks.\nThe \nev34j-mindstorms library\n is meant to bridge the transition to code\nby providing simple Java objects that map directly to the Mindstorms blocks in\nthe visual editor.\n\n\nExample Code\n\n\nimport com.ev34j.mindstorms.motor.SteeringMotors;\n\npublic class SimpleSteeringMotors {\n\n  public static void main(String[] args) {\n\n    System.out.println(\nTrying out SteeringMotors\n);\n    SteeringMotors motors = new SteeringMotors(\nA\n, \nB\n);\n\n    // Go forward 2 rotations at 25% power\n    motors.onForRotations(0, 25, 2);\n    motors.waitUntilStopped();\n\n    // Go back 2 rotations at 25% power\n    motors.onForRotations(0, -25, 2);\n    motors.waitUntilStopped();\n  }\n}\n\n\n\n\nCompatibility\n\n\nThe ev34j-mindstorms library works with these devices:\n\n\n\n\nLego Mindstorms - EV3\n\n\nBrickPi\n\n\nPiStorms\n\n\n\n\nUsage\n\n\nThe \nev34j-mindstorms-tutorial\n repo\ndescribes how to setup your environment and execute ev34j-based programs.\n\n\nFirebase Demo\n\n\nThe \nev34j-mindstorms-firebase\n repo\ndemonstrates the use of \nFirebase\n with an ev34j robot.\n\n\nev34j-mindstorms Classes\n\n\nThe ev34j-mindstorms classes are outlined\n\nhere\n.\n\n\nJavadocs\n\n\nThe javadocs for ev34j-mindstorms are \nhere\n.\n\n\nAcknowledgments\n\n\nSincere thanks to:\n\n\n\n\n\n\n@dlech\n and \n@rhempel\n for their excellent \nev3dev.org\n effort.\n\n\n\n\n\n\n@jabrena\n for his work to provide a LeJOS-like Java API at \nev3dev-lang-java\n.", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
-            "title": "Welcome to MkDocs"
+            "location": "/#ev34j", 
+            "text": "A Java library for  ev3dev  devices.", 
+            "title": "ev34j"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
+            "location": "/#introduction", 
+            "text": "The  Lego Mindstorms visual editor \nis a great first programming environment. However, as things get more complex,\nvisual programming can get cumbersome and you want to  use code rather than blocks.\nThe  ev34j-mindstorms library  is meant to bridge the transition to code\nby providing simple Java objects that map directly to the Mindstorms blocks in\nthe visual editor.", 
+            "title": "Introduction"
         }, 
         {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/#example-code", 
+            "text": "import com.ev34j.mindstorms.motor.SteeringMotors;\n\npublic class SimpleSteeringMotors {\n\n  public static void main(String[] args) {\n\n    System.out.println( Trying out SteeringMotors );\n    SteeringMotors motors = new SteeringMotors( A ,  B );\n\n    // Go forward 2 rotations at 25% power\n    motors.onForRotations(0, 25, 2);\n    motors.waitUntilStopped();\n\n    // Go back 2 rotations at 25% power\n    motors.onForRotations(0, -25, 2);\n    motors.waitUntilStopped();\n  }\n}", 
+            "title": "Example Code"
         }, 
         {
-            "location": "/#test-header", 
-            "text": "cd test", 
-            "title": "Test Header"
+            "location": "/#compatibility", 
+            "text": "The ev34j-mindstorms library works with these devices:   Lego Mindstorms - EV3  BrickPi  PiStorms", 
+            "title": "Compatibility"
         }, 
         {
-            "location": "/about/", 
-            "text": "Test about", 
-            "title": "Tutorial"
+            "location": "/#usage", 
+            "text": "The  ev34j-mindstorms-tutorial  repo\ndescribes how to setup your environment and execute ev34j-based programs.", 
+            "title": "Usage"
         }, 
         {
-            "location": "/about/#test-about", 
-            "text": "", 
-            "title": "Test about"
-        }, 
-        {
-            "location": "/about/", 
-            "text": "Test about", 
+            "location": "/#firebase-demo", 
+            "text": "The  ev34j-mindstorms-firebase  repo\ndemonstrates the use of  Firebase  with an ev34j robot.", 
             "title": "Firebase Demo"
         }, 
         {
-            "location": "/about/#test-about", 
-            "text": "", 
-            "title": "Test about"
+            "location": "/#ev34j-mindstorms-classes", 
+            "text": "The ev34j-mindstorms classes are outlined here .", 
+            "title": "ev34j-mindstorms Classes"
+        }, 
+        {
+            "location": "/#javadocs", 
+            "text": "The javadocs for ev34j-mindstorms are  here .", 
+            "title": "Javadocs"
+        }, 
+        {
+            "location": "/#acknowledgments", 
+            "text": "Sincere thanks to:    @dlech  and  @rhempel  for their excellent  ev3dev.org  effort.    @jabrena  for his work to provide a LeJOS-like Java API at  ev3dev-lang-java .", 
+            "title": "Acknowledgments"
         }
     ]
 }

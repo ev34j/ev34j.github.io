@@ -52,11 +52,15 @@ describes how to setup your environment and execute ev34j-based programs.
 The [ev34j-mindstorms-firebase](https://github.com/ev34j/ev34j-mindstorms-firebase) repo
 demonstrates the use of [Firebase](https://www.firebase.com) with an ev34j robot.
 
-## The ev34j-mindstorms classes
+## ev34j-mindstorms Classes
 
 The ev34j-mindstorms classes are outlined
-[here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorms-Object-Summary)
-and the javadocs are [here](http://www.ev34j.com/javadocs/).
+[here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorms-Object-Summary).
+
+## Javadocs
+
+The javadocs for ev34j-mindstorms are [here](http://www.ev34j.com/javadocs/).
+
 
 ## Acknowledgments
 
