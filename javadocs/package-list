@@ -1,0 +1,9 @@
+com.ev34j.core.system
+com.ev34j.mindstorms.battery
+com.ev34j.mindstorms.buttons
+com.ev34j.mindstorms.display
+com.ev34j.mindstorms.leds
+com.ev34j.mindstorms.motor
+com.ev34j.mindstorms.sensor
+com.ev34j.mindstorms.sound
+com.ev34j.mindstorms.time
