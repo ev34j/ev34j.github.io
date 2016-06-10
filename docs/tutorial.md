@@ -11,22 +11,22 @@ of the [ev34j-mindstorms](https://github.com/ev34j/ev34j) objects.
 
 Before you can run Java programs on the EV3 there is some setup required:
 
-1. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Install-required-Mac-software) on your Mac.
-2. [Create a bootable image](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev distro](http://www.ev3dev.org) on a micro SD card.
-3. [Establish a network connection](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Establish-a-network-connection) on your EV3.
-4. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Install-required-EV3-software) on your EV3.
+1. [Install required software](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Install-required-Mac-software) on your Mac.
+2. [Create a bootable image](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev distro](http://www.ev3dev.org) on a micro SD card.
+3. [Establish a network connection](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Establish-a-network-connection) on your EV3.
+4. [Install required software](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Install-required-EV3-software) on your EV3.
 
 ## Clone the ev34j-mindstorms tutorial repo
 
 Open a [Terminal](https://en.wikipedia.org/wiki/Terminal_(OS_X)) window and clone the
-[ev34j-mindstorms-tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial) from [GitHub](https://github.com)
+[ev34j-mindstorms-tutorial repo](https://github.com/ev34j/ev34j-mindstorms-tutorial) from [GitHub](https://github.com)
 with:
 
 ```bash
 $ cd ~
 $ mkdir git
 $ cd git
-$ git clone https://github.com/ev3dev-lang-java/mindstorm-tutorial.git
+$ git clone https://github.com/ev34j/mindstorm-tutorial.git
 $ cd ev34j-mindstorms-tutorial
 $ ls
 ```
