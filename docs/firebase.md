@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorms-firebase.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorms-firebase)
 
+## Repo
+The repo is [ev34j-mindstorms-firebase](https://github.com/ev34j/ev34j-mindstorms-firebase).
+
 ## System setup
 
 The setup is the same as the

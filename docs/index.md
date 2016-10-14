@@ -47,13 +47,15 @@ The ev34j-mindstorms library works with these devices:
 
 ## Usage
 
-The [ev34j-mindstorms-tutorial](https://github.com/ev34j/ev34j-mindstorms-tutorial) repo
+The [ev34j-mindstorms Tutorial](./tutorial)
 describes how to setup your environment and execute ev34j-based programs.
+The repo is [ev34j-mindstorms-tutorial](https://github.com/ev34j/ev34j-mindstorms-tutorial).
 
 ## Firebase Demo
 
-The [ev34j-mindstorms-firebase](https://github.com/ev34j/ev34j-mindstorms-firebase) repo
-demonstrates the use of [Firebase](https://www.firebase.com) with an ev34j robot.
+The [Firebase Demo](./firebase)
+shows the use of [Firebase](https://www.firebase.com) with an ev34j robot. The repo
+is [ev34j-mindstorms-firebase](https://github.com/ev34j/ev34j-mindstorms-firebase).
 
 ## ev34j-mindstorms Classes
 
