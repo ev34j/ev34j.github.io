@@ -53,7 +53,7 @@ The repo is [ev34j-mindstorms-tutorial](https://github.com/ev34j/ev34j-mindstorm
 
 ## Firebase Demo
 
-The [Firebase Demo](./firebase)
+The [ev34j-mindstorms Firebase Demo](./firebase)
 shows the use of [Firebase](https://www.firebase.com) with an ev34j robot. The repo
 is [ev34j-mindstorms-firebase](https://github.com/ev34j/ev34j-mindstorms-firebase).
 
