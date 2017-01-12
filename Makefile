@@ -6,3 +6,6 @@ website:
 
 server:
 	mkdocs serve
+
+clean:
+	rm -rf site

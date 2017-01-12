@@ -5,7 +5,7 @@ pages:
 - Tutorial: tutorial.md
 - Firebase Demo: firebase.md
 
-theme: cerulean
+theme: readthedocs
 
 google_analytics: ['UA-78614552-1', 'auto']
 
